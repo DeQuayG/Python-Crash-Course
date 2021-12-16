@@ -1,15 +1,41 @@
-not_weird_nums = list(range(22, 101, 2))
-not_weird_nums.append(2)
-not_weird_nums.append(4)
-print(not_weird_nums)
+#Hackerrank Username = dmglascoe
+#Task:
+#Given an integer, perform the following conditional actions:
+ 
+#Constraints: 1 < n < 100
 
-n = int(input("What is n? "))
-if n in not_weird_nums:
-    print("Not Weird")
-else:
-    print("Weird")
+#If n is odd, print Weird
+#If n is even and in the inclusive range of to 2 to 5, print "Not Weird"
+#If n is even and in the inclusive range of 6 to 20, print "Weird"
+#If n is even and greater than 20, print "Not Weird"
 
-# solution code ended up a little different:
+#Input Format:
+#A single line containing a positive integer,
+
+#Output Format:
+#Print Weird if the number is weird. Otherwise, print Not Weird.
+
+
+#I had 2 solutions, the first is more tedious than the second: 
+
+#First Solution: 
+all_nums = list(range(1, 101))
+odd_nums = list(range(1, 101, 2))
+inclusive_range = [2, 4]
+even_inclusive = list(range(6, 21, 2))
+greater_than_range = list(range(20, 101, 2)) 
+
+num = int(input().strip())
+if num in odd_nums: 
+   print("Weird")
+elif num in inclusive_range: 
+     print('Not Weird')
+elif num in even_inclusive: 
+     print("Weird") 
+elif num in greater_than_range: 
+     print("Not Weird")
+
+#Second Solution: 
 not_weird_nums = list(range(22, 101, 2))
 not_weird_nums.append(2)
 not_weird_nums.append(4)
